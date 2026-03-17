@@ -1409,9 +1409,8 @@ class Palette {
             if (b.hidden) {
                 continue;
             }
-            const itemRow = document.createElement("tr");
-            const itemCell = document.createElement("td");
-            itemRow.appendChild(itemCell);
+            const itemRow = paletteList.insertRow(-1);
+            const itemCell = itemRow.insertCell(-1);
             let img = makePaletteIcons(b.artwork);
 
             if (b.image) {
@@ -1504,7 +1503,6 @@ class Palette {
             itemCell.style.width = `${img.width}px`;
             itemCell.style.paddingRight = `${this.palettes.cellSize}px`;
             itemCell.appendChild(img);
-            paletteList.appendChild(itemRow);
         }
 
         if (this.palettes.mobile) {

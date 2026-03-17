@@ -1544,7 +1544,8 @@ describe("Palettes Class", () => {
                         style: {},
                         appendChild: jest.fn()
                     }))
-                }))
+            })),
+            appendChild: jest.fn()
             };
             global.docById = jest.fn(id => {
                 if (id === "PaletteBody_items") return paletteList;
@@ -1586,7 +1587,8 @@ describe("Palettes Class", () => {
                             }
                         };
                     })
-                }))
+            })),
+            appendChild: jest.fn()
             };
             global.docById = jest.fn(id => {
                 if (id === "PaletteBody_items") return paletteList;
@@ -1671,7 +1673,8 @@ describe("Palettes Class", () => {
                             }
                         };
                     })
-                }))
+            })),
+            appendChild: jest.fn()
             };
             global.docById = jest.fn(id => {
                 if (id === "PaletteBody_items") return paletteList;
@@ -1729,7 +1732,8 @@ describe("Palettes Class", () => {
                         style: {},
                         appendChild: jest.fn()
                     }))
-                }))
+            })),
+            appendChild: jest.fn()
             };
             const palDiv = { childNodes: [{ style: {} }], removeChild: jest.fn() };
             global.docById = jest.fn(id => {
